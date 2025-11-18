@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="ジョゼと虎と魚たち,ジョゼ,映画,ロードショー,オフィシャルサイト">
+        <meta name="discription" content="映画『ジョゼと虎と魚たち』公式サイトのホームページです。">
+        <title>HOME|映画『ジョゼと虎と魚たち』公式サイト</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="header_wrapper"><!--Flexコンテナ-->
+                <div class="header_logo"><!--Flexアイテム：ヘッダー左側-->
+                    <h1><a href="index.html"><img src="images/joze_title_logo.jpg" alt="ヘッダーロゴ"></a></h1>
+                </div>
+                <div class="header_nav"><!--Flexアイテム：ヘッダー右側-->
+                    <nav class="nav_header">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="story.html">STORY</a></li>
+                            <li><a href="characters.html">CHARACTER</a></li>
+                            <li><a href="music.html">MUSIC</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!--メインビジュアル-->
+        <div class="slideshow-frame">
+            <img src="images/joze_08.jpg" class="active" alt="スライド1">
+            <img src="images/joze_09.jpg" alt="スライド2">
+            <img src="images/joze_10.jpg" alt="スライド3">
+            <img src="images/joze_11.jpg" alt="スライド4">
+        </div>
+        <script>
+            const slides = document.querySelectorAll('.slideshow-frame img');
+            let current = 0;
+
+            setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+            }, 4000); // 4秒ごとに切り替え
+        </script>
+
+        <!--メインコンテンツ-->
+        <main class="main_contents_second">
+            <h2>MUSIC</h2>
+            <div class="content_wrapper"><!--Flexコンテナ-->
+                <div class="content_movie">
+                    <section>
+                        <iframe width="560" height="315"src="https://www.youtube.com/embed/pyDCubgU57g"title="YouTube video player"frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                        <p>主題歌：Eve 「蒼のワルツ」 Music Video<p>
+                    </section>
+
+                    <section>
+                        <iframe width="560" height="315"src="https://www.youtube.com/embed/vRPCAAUBMms"title="YouTube video player"frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                        <p>挿入歌：Eve 「心海」 Music Video</p>
+                    </section>
+                </div>
+                <div class="content_img_movie">
+                    <img src="images/Eve_icon.webp" alt="artistイメージ">
+                    <p>Eve(Toy's Factory)<p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="page-footer">
+            <nav class="footer_nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="story.html">STORY</a></li>
+                    <li><a href="characters.html">CHARACTER</a></li>
+                    <li><a href="music.html">MUSIC</a></li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                <small>Copyright 2025 ジョゼと虎と魚たち</small>
+            </div>
+        </footer>
+    </body>
+</html>
